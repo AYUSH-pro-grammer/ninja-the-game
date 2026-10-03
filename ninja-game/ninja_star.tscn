@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bd4m7k6nakhoo"]
+
+[ext_resource type="Script" uid="uid://dewd24fjfjrap" path="res://ninja_star.gd" id="1_cijvt"]
+[ext_resource type="Texture2D" uid="uid://crfrgsi0p6ova" path="res://temp-assets/Traps/Spiked Ball/Spiked Ball.png" id="2_jorvf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wax55"]
+
+[node name="ninjaStar" type="Area2D" unique_id=70798210]
+script = ExtResource("1_cijvt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=409008170]
+position = Vector2(104, 582)
+shape = SubResource("RectangleShape2D_wax55")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=255815814]
+texture_filter = 1
+position = Vector2(104, 582)
+texture = ExtResource("2_jorvf")
