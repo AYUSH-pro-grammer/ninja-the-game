@@ -1,6 +1,10 @@
 extends CharacterBody2D
-@onready var NinjaStar:Area2D = $"../ninjaStar"
 @export var ninja_star_scene: PackedScene
+
+
+@onready var star_spawn_point: Marker2D = $StarSpawnPoint
+
+
 
 
 
@@ -11,7 +15,7 @@ const DASH_SPEED = 3000
 var facing_diection = 1
 var is_dashing = false
 
-var DASH_TIME  = 0.1
+var DASH_TIME  = 0.2
 var dash_timer = 0
 
 var DASH_TIME_LIMIT = 1 
@@ -45,12 +49,18 @@ func _physics_process(delta: float) -> void:
 	
 	if dashed_time > 0:
 		dashed_time -= delta
-		
+
 	if Input.is_action_just_pressed("shoot") and ninja_star_time <= 0:
+
 		var star = ninja_star_scene.instantiate()
-		star.global_position = global_position
-		star.direction = facing_diection
+
 		get_tree().current_scene.add_child(star)
+
+		star.global_position.x = star_spawn_point.global_position.x
+		star.global_position.y = star_spawn_point.global_position.y
+
+		star.direction = facing_diection
+
 		ninja_star_time = NINJA_STAR_TIME_LIMIT
 		
 	if ninja_star_time > 0:
