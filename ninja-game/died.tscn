@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://d3li2cg5uitgu"]
+
+[node name="Node2D" type="Node2D" unique_id=1168471958]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1485875985]
+offset_right = 1148.0
+offset_bottom = 647.0
+color = Color(0.0627451, 0.05490196, 0.08627451, 1)
+
+[node name="Label" type="Label" parent="." unique_id=628485035]
+texture_filter = 1
+offset_left = 165.0
+offset_top = 64.0
+offset_right = 980.0
+offset_bottom = 300.0
+theme_override_font_sizes/font_size = 173
+text = "YOU DIED"
+
+[node name="Button" type="Button" parent="." unique_id=457570473]
+offset_left = 305.0
+offset_top = 389.0
+offset_right = 853.0
+offset_bottom = 510.0
+theme_override_font_sizes/font_size = 55
+text = "HOME"
