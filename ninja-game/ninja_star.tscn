@@ -6,6 +6,8 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wax55"]
 
 [node name="ninjaStar" type="Area2D" unique_id=70798210]
+collision_layer = 128
+collision_mask = 32
 script = ExtResource("1_cijvt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=409008170]

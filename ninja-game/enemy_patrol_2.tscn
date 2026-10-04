@@ -1,131 +1,132 @@
-[gd_scene format=3 uid="uid://txxnhhkcshbg"]
+[gd_scene format=3 uid="uid://f2qbqlroks52"]
 
-[ext_resource type="Script" uid="uid://bg4sh08gy04kd" path="res://enemy.gd" id="1_rcg7n"]
-[ext_resource type="Texture2D" uid="uid://dfqhnaajpva38" path="res://temp-assets/Main Characters/Virtual Guy/Idle (32x32).png" id="2_fwikq"]
-[ext_resource type="Texture2D" uid="uid://d0ilycuje6gu6" path="res://temp-assets/Main Characters/Desappearing (96x96).png" id="3_eqtyy"]
-[ext_resource type="Texture2D" uid="uid://bcd3yv3kyi724" path="res://temp-assets/Main Characters/Virtual Guy/Run (32x32).png" id="4_umnhi"]
+[ext_resource type="Script" uid="uid://bg4sh08gy04kd" path="res://enemy.gd" id="1_5rebk"]
+[ext_resource type="PackedScene" uid="uid://d3li2cg5uitgu" path="res://died.tscn" id="2_15d5j"]
+[ext_resource type="Texture2D" uid="uid://dfqhnaajpva38" path="res://temp-assets/Main Characters/Virtual Guy/Idle (32x32).png" id="3_dnocb"]
+[ext_resource type="Texture2D" uid="uid://d0ilycuje6gu6" path="res://temp-assets/Main Characters/Desappearing (96x96).png" id="4_cddg4"]
+[ext_resource type="Texture2D" uid="uid://bcd3yv3kyi724" path="res://temp-assets/Main Characters/Virtual Guy/Run (32x32).png" id="5_0h40g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x0ka3"]
-size = Vector2(33, 47)
+size = Vector2(45.5, 55)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6ip5v"]
-atlas = ExtResource("2_fwikq")
+atlas = ExtResource("3_dnocb")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q5dlx"]
-atlas = ExtResource("2_fwikq")
+atlas = ExtResource("3_dnocb")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c4wnb"]
-atlas = ExtResource("2_fwikq")
+atlas = ExtResource("3_dnocb")
 region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7plk7"]
-atlas = ExtResource("2_fwikq")
+atlas = ExtResource("3_dnocb")
 region = Rect2(96, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fbwgr"]
-atlas = ExtResource("2_fwikq")
+atlas = ExtResource("3_dnocb")
 region = Rect2(128, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7mj2a"]
-atlas = ExtResource("2_fwikq")
+atlas = ExtResource("3_dnocb")
 region = Rect2(160, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fshgd"]
-atlas = ExtResource("2_fwikq")
+atlas = ExtResource("3_dnocb")
 region = Rect2(192, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lbrxf"]
-atlas = ExtResource("2_fwikq")
+atlas = ExtResource("3_dnocb")
 region = Rect2(224, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xjt7e"]
-atlas = ExtResource("2_fwikq")
+atlas = ExtResource("3_dnocb")
 region = Rect2(256, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0xo8l"]
-atlas = ExtResource("2_fwikq")
+atlas = ExtResource("3_dnocb")
 region = Rect2(288, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xfyss"]
-atlas = ExtResource("2_fwikq")
+atlas = ExtResource("3_dnocb")
 region = Rect2(320, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_whnp6"]
-atlas = ExtResource("3_eqtyy")
+atlas = ExtResource("4_cddg4")
 region = Rect2(0, 0, 96, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_22e24"]
-atlas = ExtResource("3_eqtyy")
+atlas = ExtResource("4_cddg4")
 region = Rect2(96, 0, 96, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m7xe6"]
-atlas = ExtResource("3_eqtyy")
+atlas = ExtResource("4_cddg4")
 region = Rect2(192, 0, 96, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wqmsq"]
-atlas = ExtResource("3_eqtyy")
+atlas = ExtResource("4_cddg4")
 region = Rect2(288, 0, 96, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fkgk1"]
-atlas = ExtResource("3_eqtyy")
+atlas = ExtResource("4_cddg4")
 region = Rect2(384, 0, 96, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qgxp6"]
-atlas = ExtResource("3_eqtyy")
+atlas = ExtResource("4_cddg4")
 region = Rect2(480, 0, 96, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_akb8o"]
-atlas = ExtResource("3_eqtyy")
+atlas = ExtResource("4_cddg4")
 region = Rect2(576, 0, 96, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3ngjr"]
-atlas = ExtResource("4_umnhi")
+atlas = ExtResource("5_0h40g")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qilgh"]
-atlas = ExtResource("4_umnhi")
+atlas = ExtResource("5_0h40g")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4qosj"]
-atlas = ExtResource("4_umnhi")
+atlas = ExtResource("5_0h40g")
 region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cjlbh"]
-atlas = ExtResource("4_umnhi")
+atlas = ExtResource("5_0h40g")
 region = Rect2(96, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kfelt"]
-atlas = ExtResource("4_umnhi")
+atlas = ExtResource("5_0h40g")
 region = Rect2(128, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ytlpd"]
-atlas = ExtResource("4_umnhi")
+atlas = ExtResource("5_0h40g")
 region = Rect2(160, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2v765"]
-atlas = ExtResource("4_umnhi")
+atlas = ExtResource("5_0h40g")
 region = Rect2(192, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b8fb0"]
-atlas = ExtResource("4_umnhi")
+atlas = ExtResource("5_0h40g")
 region = Rect2(224, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ma08v"]
-atlas = ExtResource("4_umnhi")
+atlas = ExtResource("5_0h40g")
 region = Rect2(256, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s32dh"]
-atlas = ExtResource("4_umnhi")
+atlas = ExtResource("5_0h40g")
 region = Rect2(288, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_037st"]
-atlas = ExtResource("4_umnhi")
+atlas = ExtResource("5_0h40g")
 region = Rect2(320, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6orn5"]
-atlas = ExtResource("4_umnhi")
+atlas = ExtResource("5_0h40g")
 region = Rect2(352, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hlss6"]
@@ -237,38 +238,41 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wlb43"]
-size = Vector2(130.64517, 71.03027)
+size = Vector2(342.19348, 71.03027)
 
-[node name="EnemyPatrol" type="Node" unique_id=1373613696]
+[node name="EnemyPatrol2" type="Node" unique_id=830794074]
 
-[node name="enemy" type="CharacterBody2D" parent="." unique_id=248951013 groups=["enemy"]]
-script = ExtResource("1_rcg7n")
-chase_speed = 200.0
+[node name="enemy" type="CharacterBody2D" parent="." unique_id=2038547884]
+position = Vector2(1283, -210)
+collision_layer = 2
+script = ExtResource("1_5rebk")
+chase_speed = 300.0
+dead_screen = ExtResource("2_15d5j")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy" unique_id=139578778]
-position = Vector2(347.5, 1094.5)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy" unique_id=1584047579]
+position = Vector2(94, 330)
 shape = SubResource("RectangleShape2D_x0ka3")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="enemy" unique_id=1492880209]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="enemy" unique_id=1653762846]
 texture_filter = 1
-position = Vector2(346, 1085.5)
+position = Vector2(93, 321)
 scale = Vector2(1.9375, 2.15625)
 sprite_frames = SubResource("SpriteFrames_hlss6")
 autoplay = "default"
 
-[node name="DetectionArea" type="Area2D" parent="." unique_id=580083325]
-position = Vector2(1154, -22)
+[node name="DetectionArea" type="Area2D" parent="." unique_id=754495195]
+position = Vector2(2437, -232)
 scale = Vector2(1.9375, 2.062501)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea" unique_id=66655511]
-position = Vector2(-394.8387, 540.60583)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea" unique_id=390184407]
+position = Vector2(-493.16125, 162.42418)
 shape = SubResource("RectangleShape2D_wlb43")
 
-[node name="LeftPoint" type="Marker2D" parent="." unique_id=1753883138]
-position = Vector2(226, 1120)
+[node name="LeftPoint" type="Marker2D" parent="." unique_id=1201316421]
+position = Vector2(1167, 109)
 
-[node name="RightPoint" type="Marker2D" parent="." unique_id=1893204085]
-position = Vector2(446, 1127)
+[node name="RightPoint" type="Marker2D" parent="." unique_id=1936209907]
+position = Vector2(1587, 110)
 
 [connection signal="body_entered" from="DetectionArea" to="enemy" method="_on_detection_area_body_entered"]
 [connection signal="body_exited" from="DetectionArea" to="enemy" method="_on_detection_area_body_exited"]
