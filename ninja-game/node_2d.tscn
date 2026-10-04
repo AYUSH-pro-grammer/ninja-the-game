@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://biobayxy8ffw3" path="res://temp-assets/Main Characters/Pink Man/Jump (32x32).png" id="2_epypp"]
 [ext_resource type="PackedScene" uid="uid://bd4m7k6nakhoo" path="res://ninja_star.tscn" id="3_0hol4"]
 [ext_resource type="Texture2D" uid="uid://dy5vxtyrj1tfa" path="res://temp-assets/Main Characters/Pink Man/Idle (32x32).png" id="4_q6r6c"]
+[ext_resource type="Texture2D" uid="uid://bavkusrh7w6y3" path="res://Sprite-0003-Sheet.png" id="4_rjqkl"]
 [ext_resource type="Texture2D" uid="uid://b45b6iime7yl8" path="res://temp-assets/Main Characters/Pink Man/Double Jump (32x32).png" id="5_4d7sh"]
 [ext_resource type="Script" uid="uid://qdba1bln2af7" path="res://camera_2d.gd" id="5_q6r6c"]
 [ext_resource type="Texture2D" uid="uid://cojyu5y13txt" path="res://temp-assets/Main Characters/Pink Man/Fall (32x32).png" id="6_ir8iy"]
@@ -17,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://xpwiatbucsc8" path="res://trampuline.tscn" id="15_d2bti"]
 [ext_resource type="PackedScene" uid="uid://s3cnlhaj0g38" path="res://spinning_saw.tscn" id="15_k73cj"]
 [ext_resource type="Texture2D" uid="uid://d0ilycuje6gu6" path="res://temp-assets/Main Characters/Desappearing (96x96).png" id="15_ta5nu"]
+[ext_resource type="Texture2D" uid="uid://cyuj8f3ak3kjw" path="res://Sprite-0001.png" id="18_k73cj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_epypp"]
 texture = ExtResource("2_0e48y")
@@ -363,6 +365,26 @@ region = Rect2(288, 0, 32, 32)
 atlas = ExtResource("4_q6r6c")
 region = Rect2(320, 0, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_ld5wt"]
+atlas = ExtResource("4_rjqkl")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wcv2n"]
+atlas = ExtResource("4_rjqkl")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b0j31"]
+atlas = ExtResource("4_rjqkl")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xgqcr"]
+atlas = ExtResource("4_rjqkl")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6jj3b"]
+atlas = ExtResource("4_rjqkl")
+region = Rect2(512, 0, 128, 128)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_t3mf0"]
 atlas = ExtResource("15_ta5nu")
 region = Rect2(0, 0, 96, 96)
@@ -510,6 +532,26 @@ animations = [{
 "loop": 1,
 "name": &"default",
 "speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ld5wt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wcv2n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b0j31")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xgqcr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6jj3b")
+}],
+"loop": 1,
+"name": &"defaultttt",
+"speed": 3.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1116,15 +1158,16 @@ ninja_star_scene = ExtResource("3_0hol4")
 position = Vector2(541, 321)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1143232202]
-position = Vector2(517, 310)
+position = Vector2(34, 561)
 shape = SubResource("RectangleShape2D_0hol4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=1783655752]
 texture_filter = 1
-position = Vector2(516, 303)
-scale = Vector2(2.25, 2.21875)
+position = Vector2(33.499996, 553.5)
+scale = Vector2(2.4062495, 2.4062507)
 sprite_frames = SubResource("SpriteFrames_gm4ri")
 autoplay = "default"
+frame_progress = 0.5584044
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1034109075 node_paths=PackedStringArray("player")]
 position = Vector2(0, 1)
@@ -1359,6 +1402,14 @@ position = Vector2(2053, 282)
 
 [node name="RightPoint" type="Marker2D" parent="EnemyPatrol3" unique_id=1279961512]
 position = Vector2(2470, 285)
+
+[node name="CharacterBody2D2" type="CharacterBody2D" parent="." unique_id=1945718464]
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D2" unique_id=187755865]
+texture_filter = 1
+position = Vector2(160.99998, 559.00006)
+scale = Vector2(2.2500002, 2.0625002)
+texture = ExtResource("18_k73cj")
 
 [connection signal="body_entered" from="EnemyPatrol/DetectionArea" to="EnemyPatrol/enemy" method="_on_detection_area_body_entered"]
 [connection signal="body_exited" from="EnemyPatrol/DetectionArea" to="EnemyPatrol/enemy" method="_on_detection_area_body_exited"]
