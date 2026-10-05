@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bw6i4kes2x1ap" path="res://temp-assets/Menu/Text/Text (White) (8x10).png" id="1_ouk20"]
 [ext_resource type="PackedScene" uid="uid://dwehrcgk4h3by" path="res://level0.tscn" id="2_4hy44"]
 [ext_resource type="Texture2D" uid="uid://ba3u5qm0uh58j" path="res://temp-assets/Terrain/Terrain (16x16).png" id="2_mae5d"]
+[ext_resource type="PackedScene" uid="uid://dqe6n2mprlnhb" path="res://level2.tscn" id="3_ytr4m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ytr4m"]
 texture = ExtResource("1_ouk20")
@@ -216,6 +217,7 @@ sources/0 = SubResource("TileSetAtlasSource_ouk20")
 [node name="Node2D" type="Node2D" unique_id=541749263]
 script = ExtResource("1_mae5d")
 level0 = ExtResource("2_4hy44")
+level2 = ExtResource("3_ytr4m")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=698241175]
 offset_right = 177.0

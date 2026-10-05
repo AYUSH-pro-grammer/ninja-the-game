@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://lp22dyavuhef"]
+
+[ext_resource type="Script" uid="uid://bpjpnpm2lud7a" path="res://finish.gd" id="1_yp4eo"]
+
+[node name="finish" type="Node2D" unique_id=502261475]
+script = ExtResource("1_yp4eo")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1576792974]
+offset_right = 1148.0
+offset_bottom = 647.0
+color = Color(0.0627451, 0.05490196, 0.08627451, 1)
+
+[node name="Label" type="Label" parent="." unique_id=367619040]
+texture_filter = 1
+offset_left = 169.0
+offset_top = 146.0
+offset_right = 997.0
+offset_bottom = 382.0
+theme_override_font_sizes/font_size = 92
+text = "LEVEL COMPLETED"
+
+[node name="ButtonMenu" type="Button" parent="." unique_id=211961933]
+offset_left = 305.0
+offset_top = 389.0
+offset_right = 853.0
+offset_bottom = 510.0
+theme_override_font_sizes/font_size = 55
+text = "HOME"
+
+[node name="ButtonNext" type="Button" parent="." unique_id=1393801062]
+offset_right = 8.0
+offset_bottom = 8.0
