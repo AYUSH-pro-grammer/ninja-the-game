@@ -2,7 +2,6 @@ extends Area2D
 @export var dead_screen: PackedScene
 
 
-
 func _ready() -> void:
 	pass # Replace with function body.
 

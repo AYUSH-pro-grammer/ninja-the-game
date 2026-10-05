@@ -134,7 +134,8 @@ func player_died(body: Node2D) -> void:
 
 	if is_dead:
 		return
-
+		
+	
 	is_dead = true
 	velocity = Vector2.ZERO
 

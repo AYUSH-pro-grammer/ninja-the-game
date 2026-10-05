@@ -47,8 +47,11 @@ func _on_body_entered(body: Node2D) -> void:
 		if body.has_method("die"):
 			body.die()
 
+
 		break_star()
 		return
+		
+
 
 	# Wall / platform / other world object
 	print("NINJA STAR HIT WALL: ", body.name)

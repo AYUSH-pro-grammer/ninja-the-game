@@ -62,11 +62,9 @@ func _physics_process(delta: float) -> void:
 		dashed_time -= delta
 
 
-	# =====================================
-	# SHOOT
-	# =====================================
 
 	if Input.is_action_just_pressed("shoot") and ninja_star_time <= 0:
+		sprite.play("shoot")
 
 		var star = ninja_star_scene.instantiate()
 
@@ -128,7 +126,7 @@ func _physics_process(delta: float) -> void:
 
 	if is_on_floor() and velocity.x == 0:
 		sprite.play("default")
-
+		
 	elif is_on_floor() and velocity.x != 0:
 		sprite.play("running")
 
