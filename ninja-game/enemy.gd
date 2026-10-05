@@ -24,13 +24,11 @@ func _physics_process(delta: float) -> void:
 	if is_dead:
 		return
 
-	# Gravity
+
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 
-	# =====================================
-	# CHASE PLAYER
-	# =====================================
+
 	if player != null and is_instance_valid(player):
 
 		if player.global_position.x > global_position.x:
@@ -46,9 +44,6 @@ func _physics_process(delta: float) -> void:
 
 		sprite.play("running")
 
-	# =====================================
-	# PATROL
-	# =====================================
 	else:
 		player = null
 
@@ -57,12 +52,10 @@ func _physics_process(delta: float) -> void:
 		sprite.play("running")
 		sprite.flip_h = velocity.x < 0
 
-	# Move enemy
+
 	move_and_slide()
 
-	# =====================================
-	# CHECK REAL PHYSICAL COLLISION
-	# =====================================
+
 	for i in get_slide_collision_count():
 
 		var collision := get_slide_collision(i)
@@ -72,9 +65,6 @@ func _physics_process(delta: float) -> void:
 			player_died(body)
 			return
 
-	# =====================================
-	# PATROL LIMITS
-	# =====================================
 	if player == null:
 
 		if global_position.x >= right_limit:
@@ -86,10 +76,6 @@ func _physics_process(delta: float) -> void:
 			direction = 1
 
 
-# =====================================
-# DETECTION AREA
-# ONLY USED FOR CHASING
-# =====================================
 
 func _on_detection_area_body_entered(body: Node2D) -> void:
 
@@ -105,9 +91,7 @@ func _on_detection_area_body_exited(body: Node2D) -> void:
 		player = null
 
 
-# =====================================
-# ENEMY DIES
-# =====================================
+
 
 func die() -> void:
 
@@ -126,10 +110,6 @@ func die() -> void:
 	queue_free()
 
 
-# =====================================
-# PLAYER DIES
-# =====================================
-
 func player_died(body: Node2D) -> void:
 
 	if is_dead:
@@ -143,7 +123,6 @@ func player_died(body: Node2D) -> void:
 
 	sprite.play("disappear")
 
-	# Stop player immediately
 	if body.has_method("disappear"):
 		body.disappear()
 

@@ -31,26 +31,17 @@ func _physics_process(delta: float) -> void:
 	if is_dead:
 		return
 
-	# =====================================
-	# GRAVITY
-	# =====================================
-
 	if not is_on_floor():
 		velocity += get_gravity() * delta * 2
 
 
-	# =====================================
-	# JUMP
-	# =====================================
 
 	if Input.is_action_just_pressed("ui_accept") and jump_level < 1:
 		jump_level += 1
 		velocity.y = JUMP_VELOCITY
 
 
-	# =====================================
-	# DASH
-	# =====================================
+
 
 	if Input.is_action_just_pressed("dash") and not is_dashing and dashed_time <= 0:
 		is_dashing = true
@@ -81,9 +72,7 @@ func _physics_process(delta: float) -> void:
 		ninja_star_time -= delta
 
 
-	# =====================================
-	# DASH MOVEMENT
-	# =====================================
+
 
 	if is_dashing:
 
@@ -95,9 +84,6 @@ func _physics_process(delta: float) -> void:
 			is_dashing = false
 
 
-	# =====================================
-	# NORMAL MOVEMENT
-	# =====================================
 
 	if not is_dashing:
 
@@ -120,9 +106,6 @@ func _physics_process(delta: float) -> void:
 			)
 
 
-	# =====================================
-	# ANIMATION
-	# =====================================
 
 	if is_on_floor() and velocity.x == 0:
 		sprite.play("default")
@@ -140,10 +123,6 @@ func _physics_process(delta: float) -> void:
 	if is_on_floor():
 		jump_level = 0
 
-
-	# =====================================
-	# MOVE PLAYER
-	# =====================================
 
 	move_and_slide()
 

@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://d3li2cg5uitgu"]
 
+[ext_resource type="Script" uid="uid://1mifwa0fpnt1" path="res://died.gd" id="1_2fs67"]
+
 [node name="Node2D" type="Node2D" unique_id=1168471958]
+script = ExtResource("1_2fs67")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1485875985]
 offset_right = 1148.0

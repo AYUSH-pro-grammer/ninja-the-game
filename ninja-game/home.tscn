@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://c4ick8q7oq17t"]
 
+[ext_resource type="Script" uid="uid://dsocid2gi421p" path="res://home.gd" id="1_o1ld7"]
 [ext_resource type="Texture2D" uid="uid://ba3u5qm0uh58j" path="res://temp-assets/Terrain/Terrain (16x16).png" id="1_tt30a"]
+[ext_resource type="PackedScene" uid="uid://b8fb87if0pgqx" path="res://menu.tscn" id="2_2ayvv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1ey7h"]
 texture = ExtResource("1_tt30a")
@@ -153,6 +155,8 @@ texture = ExtResource("1_tt30a")
 sources/0 = SubResource("TileSetAtlasSource_1ey7h")
 
 [node name="Node2D" type="Node2D" unique_id=2135865113]
+script = ExtResource("1_o1ld7")
+menu_scene = ExtResource("2_2ayvv")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=271895464]
 offset_right = 1152.0
@@ -172,7 +176,7 @@ text = "NINJA - THE GAME"
 tile_set = SubResource("TileSet_wlb43")
 format = 2
 
-[node name="Layer0" type="TileMapLayer" parent="TileMap" unique_id=1682465419]
+[node name="Layer1" type="TileMapLayer" parent="TileMap" unique_id=1682465419]
 use_parent_material = true
 tile_set = SubResource("TileSet_wlb43")
 

@@ -428,13 +428,13 @@ region = Rect2(1152, 0, 128, 128)
 atlas = ExtResource("4_d2bti")
 region = Rect2(1280, 0, 128, 128)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_nr8wp"]
-atlas = ExtResource("4_d2bti")
-region = Rect2(1280, 0, 128, 128)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_d2bti"]
 atlas = ExtResource("4_d2bti")
 region = Rect2(1408, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5fipt"]
+atlas = ExtResource("4_d2bti")
+region = Rect2(2048, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uqk8q"]
 atlas = ExtResource("4_d2bti")
@@ -452,9 +452,9 @@ region = Rect2(1792, 0, 128, 128)
 atlas = ExtResource("4_d2bti")
 region = Rect2(1920, 0, 128, 128)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_5fipt"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_nr8wp"]
 atlas = ExtResource("4_d2bti")
-region = Rect2(2048, 0, 128, 128)
+region = Rect2(1280, 0, 128, 128)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_gm4ri"]
 animations = [{
@@ -574,10 +574,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_nr8wp")
+"texture": SubResource("AtlasTexture_d2bti")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_d2bti")
+"texture": SubResource("AtlasTexture_5fipt")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_uqk8q")
@@ -592,11 +592,11 @@ animations = [{
 "texture": SubResource("AtlasTexture_lyuya")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_5fipt")
+"texture": SubResource("AtlasTexture_nr8wp")
 }],
 "loop": 0,
 "name": &"shoot",
-"speed": 14.0
+"speed": 9.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x0ka3"]
@@ -1107,6 +1107,8 @@ scale = Vector2(0.46874928, 0.4843752)
 sprite_frames = SubResource("SpriteFrames_gm4ri")
 animation = &"shoot"
 autoplay = "idle"
+frame = 6
+frame_progress = 1.0
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1034109075 node_paths=PackedStringArray("player")]
 position = Vector2(0, 1)
@@ -1121,63 +1123,79 @@ dead_screen = ExtResource("14_d2bti")
 
 [node name="spikes4" parent="wepons" unique_id=1143602882 instance=ExtResource("13_k73cj")]
 position = Vector2(701, -1)
+dead_screen = ExtResource("14_d2bti")
 
 [node name="spikes5" parent="wepons" unique_id=53136380 instance=ExtResource("13_k73cj")]
 position = Vector2(565, 0)
+dead_screen = ExtResource("14_d2bti")
 
 [node name="spikes6" parent="wepons" unique_id=511846154 instance=ExtResource("13_k73cj")]
 position = Vector2(3533, -4)
+dead_screen = ExtResource("14_d2bti")
 
 [node name="spikes7" parent="wepons" unique_id=2089580052 instance=ExtResource("13_k73cj")]
 position = Vector2(3397, -3)
+dead_screen = ExtResource("14_d2bti")
 
 [node name="spikes8" parent="wepons" unique_id=2075063637 instance=ExtResource("13_k73cj")]
 position = Vector2(5519, 604)
 rotation = 3.1415927
+dead_screen = ExtResource("14_d2bti")
 
 [node name="spikes9" parent="wepons" unique_id=1392051051 instance=ExtResource("13_k73cj")]
 position = Vector2(5383, 605)
 rotation = 3.1415927
+dead_screen = ExtResource("14_d2bti")
 
 [node name="spikes10" parent="wepons" unique_id=428964816 instance=ExtResource("13_k73cj")]
 position = Vector2(5249, 605)
 rotation = 3.1415927
+dead_screen = ExtResource("14_d2bti")
 
 [node name="spikes11" parent="wepons" unique_id=1757178629 instance=ExtResource("13_k73cj")]
 position = Vector2(5656, 605)
 rotation = 3.1415927
+dead_screen = ExtResource("14_d2bti")
 
 [node name="spikes12" parent="wepons" unique_id=1719767671 instance=ExtResource("13_k73cj")]
 position = Vector2(4582, 606)
 rotation = 3.1415927
+dead_screen = ExtResource("14_d2bti")
 
 [node name="spikes13" parent="wepons" unique_id=1762984767 instance=ExtResource("13_k73cj")]
 position = Vector2(4446, 607)
 rotation = 3.1415927
+dead_screen = ExtResource("14_d2bti")
 
 [node name="spikes14" parent="wepons" unique_id=511695364 instance=ExtResource("13_k73cj")]
 position = Vector2(4312, 607)
 rotation = 3.1415927
+dead_screen = ExtResource("14_d2bti")
 
 [node name="spikes15" parent="wepons" unique_id=1774128062 instance=ExtResource("13_k73cj")]
 position = Vector2(4719, 607)
 rotation = 3.1415927
+dead_screen = ExtResource("14_d2bti")
 
 [node name="spikes3" parent="wepons" unique_id=1091671404 instance=ExtResource("13_k73cj")]
 position = Vector2(1168, 607)
 rotation = 3.1415927
+dead_screen = ExtResource("14_d2bti")
 
 [node name="spikes16" parent="wepons" unique_id=1067184922 instance=ExtResource("13_k73cj")]
 position = Vector2(2129, 817)
 rotation = 3.1415927
+dead_screen = ExtResource("14_d2bti")
 
 [node name="spikes17" parent="wepons" unique_id=126887476 instance=ExtResource("13_k73cj")]
 position = Vector2(2264, 816)
 rotation = 3.1415927
+dead_screen = ExtResource("14_d2bti")
 
 [node name="spikes18" parent="wepons" unique_id=1226517080 instance=ExtResource("13_k73cj")]
 position = Vector2(2399, 816)
 rotation = 3.1415927
+dead_screen = ExtResource("14_d2bti")
 
 [node name="spinningSaw" parent="wepons" unique_id=1653487837 instance=ExtResource("15_k73cj")]
 position = Vector2(-21, -9)
@@ -1250,7 +1268,6 @@ position = Vector2(2926, -1)
 [node name="enemy" type="CharacterBody2D" parent="EnemyPatrol" unique_id=708779383 groups=["enemy"]]
 collision_layer = 2
 script = ExtResource("10_hqns4")
-chase_speed = 300.0
 dead_screen = ExtResource("14_d2bti")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyPatrol/enemy" unique_id=1802933565]
@@ -1280,7 +1297,6 @@ position = Vector2(208, 536)
 position = Vector2(1283, -210)
 collision_layer = 2
 script = ExtResource("10_hqns4")
-chase_speed = 300.0
 dead_screen = ExtResource("14_d2bti")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyPatrol2/enemy" unique_id=1584047579]
@@ -1314,7 +1330,6 @@ position = Vector2(1587, 110)
 position = Vector2(1283, -210)
 collision_layer = 2
 script = ExtResource("10_hqns4")
-chase_speed = 300.0
 dead_screen = ExtResource("14_d2bti")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyPatrol3/enemy" unique_id=2089469483]
