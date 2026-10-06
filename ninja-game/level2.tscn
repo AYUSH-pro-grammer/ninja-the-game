@@ -13,6 +13,10 @@
 [ext_resource type="Texture2D" uid="uid://bcd3yv3kyi724" path="res://temp-assets/Main Characters/Virtual Guy/Run (32x32).png" id="11_r8rrl"]
 [ext_resource type="PackedScene" uid="uid://xpwiatbucsc8" path="res://trampuline.tscn" id="12_dc5vx"]
 [ext_resource type="PackedScene" uid="uid://d3vkueq6eutki" path="res://spikes.tscn" id="13_s8oj7"]
+[ext_resource type="Script" uid="uid://dqnxw8vpcdgkb" path="res://trophy.gd" id="14_4ou0f"]
+[ext_resource type="PackedScene" uid="uid://lp22dyavuhef" path="res://finish.tscn" id="15_4k5bj"]
+[ext_resource type="Texture2D" uid="uid://b8rojqai8h0hv" path="res://temp-assets/Items/Checkpoints/End/End (Pressed) (64x64).png" id="16_hp87d"]
+[ext_resource type="PackedScene" uid="uid://s3cnlhaj0g38" path="res://spinning_saw.tscn" id="17_gxpff"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dc5vx"]
 size = Vector2(61.5, 61.25)
@@ -832,6 +836,73 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wlb43"]
 size = Vector2(337.50803, 53.40908)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2x2vu"]
+size = Vector2(140.5, 148.5)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_isful"]
+atlas = ExtResource("16_hp87d")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fpffr"]
+atlas = ExtResource("16_hp87d")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vqwgl"]
+atlas = ExtResource("16_hp87d")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jie2m"]
+atlas = ExtResource("16_hp87d")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_65h7p"]
+atlas = ExtResource("16_hp87d")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5fe57"]
+atlas = ExtResource("16_hp87d")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_57t8h"]
+atlas = ExtResource("16_hp87d")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_no4c2"]
+atlas = ExtResource("16_hp87d")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f8ci1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_isful")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fpffr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vqwgl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jie2m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_65h7p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5fe57")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_57t8h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_no4c2")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 10.0
+}]
+
 [node name="level2" type="Node2D" unique_id=648701101]
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=2020474790]
@@ -1034,7 +1105,63 @@ position = Vector2(5503, 609)
 rotation = 3.1415927
 dead_screen = ExtResource("8_dc5vx")
 
+[node name="Trophy" type="Area2D" parent="." unique_id=1999145507]
+position = Vector2(4979, 597)
+script = ExtResource("14_4ou0f")
+level_number = 1
+finish_scene = ExtResource("15_4k5bj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Trophy" unique_id=208460581]
+position = Vector2(-89.75, -25.75)
+shape = SubResource("RectangleShape2D_2x2vu")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Trophy" unique_id=1720422900]
+texture_filter = 1
+position = Vector2(-95, -31)
+scale = Vector2(1.84375, 2)
+sprite_frames = SubResource("SpriteFrames_f8ci1")
+autoplay = "default"
+
+[node name="Node3" type="Node" parent="." unique_id=1088419016]
+
+[node name="spinningSaw20" parent="Node3" unique_id=1653487837 instance=ExtResource("17_gxpff")]
+position = Vector2(2562, 221)
+
+[node name="spinningSaw21" parent="Node3" unique_id=1991999598 instance=ExtResource("17_gxpff")]
+position = Vector2(697, -182)
+
+[node name="spinningSaw22" parent="Node3" unique_id=1078958213 instance=ExtResource("17_gxpff")]
+position = Vector2(110, 263)
+
+[node name="spinningSaw23" parent="Node3" unique_id=2107495362 instance=ExtResource("17_gxpff")]
+position = Vector2(1449, -237)
+
+[node name="spinningSaw24" parent="Node3" unique_id=1148332874 instance=ExtResource("17_gxpff")]
+position = Vector2(1482, -94)
+
+[node name="spinningSaw25" parent="Node3" unique_id=1360941460 instance=ExtResource("17_gxpff")]
+position = Vector2(1409, -95)
+
+[node name="spinningSaw26" parent="Node3" unique_id=1920669715 instance=ExtResource("17_gxpff")]
+position = Vector2(1445, -165)
+
+[node name="spinningSaw27" parent="Node3" unique_id=1314235754 instance=ExtResource("17_gxpff")]
+position = Vector2(2820, 138)
+
+[node name="spinningSaw28" parent="Node3" unique_id=1206973342 instance=ExtResource("17_gxpff")]
+position = Vector2(2252, 197)
+
+[node name="spinningSaw29" parent="Node3" unique_id=1948104481 instance=ExtResource("17_gxpff")]
+position = Vector2(1440, -27)
+
+[node name="spinningSaw30" parent="Node3" unique_id=1731005126 instance=ExtResource("17_gxpff")]
+position = Vector2(2321, 136)
+
+[node name="spinningSaw31" parent="Node3" unique_id=508319555 instance=ExtResource("17_gxpff")]
+position = Vector2(2251, 137)
+
 [connection signal="body_entered" from="EnemyPatrol/DetectionArea" to="EnemyPatrol/enemy" method="_on_detection_area_body_entered"]
 [connection signal="body_exited" from="EnemyPatrol/DetectionArea" to="EnemyPatrol/enemy" method="_on_detection_area_body_exited"]
 [connection signal="body_entered" from="EnemyPatrol2/DetectionArea" to="EnemyPatrol2/enemy" method="_on_detection_area_body_entered"]
 [connection signal="body_exited" from="EnemyPatrol2/DetectionArea" to="EnemyPatrol2/enemy" method="_on_detection_area_body_exited"]
+[connection signal="body_entered" from="Trophy" to="Trophy" method="_on_body_entered"]

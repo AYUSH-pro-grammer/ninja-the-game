@@ -5,7 +5,6 @@ extends Area2D
 
 var completed := false
 
-
 func _on_body_entered(body: Node2D) -> void:
 	if completed:
 		return

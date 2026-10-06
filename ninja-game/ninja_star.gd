@@ -69,7 +69,7 @@ func break_star() -> void:
 	visible = false
 
 
-	monitoring = false
+	set_deferred("monitoring", false)
 
 
 	queue_free()

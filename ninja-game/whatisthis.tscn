@@ -1,0 +1,144 @@
+[gd_scene format=3 uid="uid://bwjguu7xecluh"]
+
+[ext_resource type="Texture2D" uid="uid://cfs07lear65aa" path="res://temp-assets/Menu/Buttons/Close.png" id="1_5mk5a"]
+[ext_resource type="Script" uid="uid://co2bx8kj73kp6" path="res://whatisthis.gd" id="1_sigw8"]
+[ext_resource type="Texture2D" uid="uid://ccewg6n3vhh11" path="res://my-assets/player-Sheet-001.png" id="2_mid2g"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lxycn"]
+atlas = ExtResource("2_mid2g")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vqw7c"]
+atlas = ExtResource("2_mid2g")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_86xni"]
+atlas = ExtResource("2_mid2g")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qq0qw"]
+atlas = ExtResource("2_mid2g")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q6q8i"]
+atlas = ExtResource("2_mid2g")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tdh31"]
+atlas = ExtResource("2_mid2g")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sigw8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lxycn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vqw7c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_86xni")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qq0qw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q6q8i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tdh31")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D" unique_id=1100999588]
+script = ExtResource("1_sigw8")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1875036920]
+offset_right = 1148.0
+offset_bottom = 647.0
+color = Color(0.0627451, 0.05490196, 0.08627451, 1)
+
+[node name="Button" type="Button" parent="." unique_id=180145216]
+texture_filter = 1
+offset_left = 982.0
+offset_top = 13.0
+offset_right = 1122.0
+offset_bottom = 140.0
+icon = ExtResource("1_5mk5a")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Label" type="Label" parent="." unique_id=1157053195]
+offset_left = 768.0
+offset_top = 580.0
+offset_right = 1142.0
+offset_bottom = 643.0
+text = "i took assets from:
+https://pixelfrog-assets.itch.io/pixel-adventure-1"
+
+[node name="Label2" type="Label" parent="." unique_id=211558960]
+offset_left = 53.0
+offset_top = 32.0
+offset_right = 427.0
+offset_bottom = 95.0
+theme_override_font_sizes/font_size = 32
+text = "HELLO PLAYER,"
+
+[node name="Label4" type="Label" parent="." unique_id=1947282262]
+offset_left = 38.0
+offset_top = 241.0
+offset_right = 412.0
+offset_bottom = 334.0
+theme_override_font_sizes/font_size = 32
+text = "HOW TO PLAY"
+
+[node name="Label6" type="Label" parent="." unique_id=620731909]
+offset_left = 744.0
+offset_top = 214.0
+offset_right = 1118.0
+offset_bottom = 307.0
+theme_override_font_sizes/font_size = 32
+text = "MY FIRST SPRITE/
+ANIMATION/
+CHARACTER DESIGN"
+
+[node name="Label3" type="Label" parent="." unique_id=1398205516]
+offset_left = 56.0
+offset_top = 92.0
+offset_right = 430.0
+offset_bottom = 185.0
+theme_override_font_sizes/font_size = 16
+text = "this is my second game that i have created and uploaded to Hack Club – Phantom :)
+my previous game was quite crude, so i wanted to create something a bit better this time around.
+enjoy <3"
+
+[node name="Label5" type="Label" parent="." unique_id=220511896]
+texture_filter = 1
+offset_left = 42.0
+offset_top = 311.0
+offset_right = 783.0
+offset_bottom = 646.0
+theme_override_font_sizes/font_size = 14
+text = "ARROW KEYS to move left/right
+
+SPACE to jump (double jump on pressing space again)
+
+W to dash
+
+A to throw ninja stars
+
+Get to the trophy in the end of each level to finish the level
+
+Complete a level to unlock the next one (you can replay any previous levels whenever you want)
+
+Do not get killed by the enemies or spikes/traps lol"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=360341245]
+texture_filter = 1
+position = Vector2(654, 278)
+sprite_frames = SubResource("SpriteFrames_sigw8")
+autoplay = "default"

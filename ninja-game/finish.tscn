@@ -1,17 +1,101 @@
 [gd_scene format=3 uid="uid://lp22dyavuhef"]
 
 [ext_resource type="Script" uid="uid://bpjpnpm2lud7a" path="res://finish.gd" id="1_yp4eo"]
+[ext_resource type="Texture2D" uid="uid://b8rojqai8h0hv" path="res://temp-assets/Items/Checkpoints/End/End (Pressed) (64x64).png" id="2_se5xy"]
+[ext_resource type="Texture2D" uid="uid://w18okd1gergn" path="res://temp-assets/Other/Confetti (16x16).png" id="3_xfp72"]
 
-[node name="finish" type="Node2D" unique_id=502261475]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ggktp"]
+atlas = ExtResource("2_se5xy")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hd5p8"]
+atlas = ExtResource("2_se5xy")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7vthi"]
+atlas = ExtResource("2_se5xy")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3y057"]
+atlas = ExtResource("2_se5xy")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o0hx7"]
+atlas = ExtResource("2_se5xy")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2m2ul"]
+atlas = ExtResource("2_se5xy")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o14cw"]
+atlas = ExtResource("2_se5xy")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j16b8"]
+atlas = ExtResource("2_se5xy")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yp4eo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ggktp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hd5p8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7vthi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3y057")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o0hx7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2m2ul")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o14cw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j16b8")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_wlb43"]
+lifetime_randomness = 0.01
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(575, 10, 1)
+direction = Vector3(0, 1, 0)
+initial_velocity_min = 30.0
+initial_velocity_max = 100.0
+angular_velocity_min = -180.00002
+angular_velocity_max = 179.99998
+gravity = Vector3(0, 150, 0)
+scale_min = 0.02
+scale_max = 0.19999999
+
+[node name="finish" type="Control" unique_id=1152250685]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_yp4eo")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1576792974]
+layout_mode = 0
 offset_right = 1148.0
 offset_bottom = 647.0
 color = Color(0.0627451, 0.05490196, 0.08627451, 1)
 
 [node name="Label" type="Label" parent="." unique_id=367619040]
 texture_filter = 1
+layout_mode = 0
 offset_left = 169.0
 offset_top = 146.0
 offset_right = 997.0
@@ -20,6 +104,7 @@ theme_override_font_sizes/font_size = 92
 text = "LEVEL COMPLETED"
 
 [node name="ButtonMenu" type="Button" parent="." unique_id=211961933]
+layout_mode = 0
 offset_left = 305.0
 offset_top = 389.0
 offset_right = 853.0
@@ -28,5 +113,29 @@ theme_override_font_sizes/font_size = 55
 text = "HOME"
 
 [node name="ButtonNext" type="Button" parent="." unique_id=1393801062]
+layout_mode = 0
 offset_right = 8.0
 offset_bottom = 8.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1104156300]
+texture_filter = 1
+position = Vector2(103, 541)
+scale = Vector2(3.140625, 3.2500002)
+sprite_frames = SubResource("SpriteFrames_yp4eo")
+autoplay = "default"
+frame_progress = 0.7375582
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="." unique_id=560511043]
+texture_filter = 1
+position = Vector2(1038, 539)
+scale = Vector2(3.140625, 3.2500002)
+sprite_frames = SubResource("SpriteFrames_yp4eo")
+autoplay = "default"
+frame_progress = 0.74122584
+
+[node name="Confetti" type="GPUParticles2D" parent="." unique_id=1121293035]
+position = Vector2(575, 0)
+amount = 200
+texture = ExtResource("3_xfp72")
+lifetime = 4.0
+process_material = SubResource("ParticleProcessMaterial_wlb43")

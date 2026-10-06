@@ -3,6 +3,9 @@
 [ext_resource type="Script" uid="uid://dsocid2gi421p" path="res://home.gd" id="1_o1ld7"]
 [ext_resource type="Texture2D" uid="uid://ba3u5qm0uh58j" path="res://temp-assets/Terrain/Terrain (16x16).png" id="1_tt30a"]
 [ext_resource type="PackedScene" uid="uid://b8fb87if0pgqx" path="res://menu.tscn" id="2_2ayvv"]
+[ext_resource type="Texture2D" uid="uid://caemddwbsyiki" path="res://temp-assets/Menu/Buttons/Play.png" id="4_2ayvv"]
+[ext_resource type="Texture2D" uid="uid://ccewg6n3vhh11" path="res://my-assets/player-Sheet-001.png" id="5_w1mvj"]
+[ext_resource type="Texture2D" uid="uid://cfs07lear65aa" path="res://temp-assets/Menu/Buttons/Close.png" id="6_lxycn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1ey7h"]
 texture = ExtResource("1_tt30a")
@@ -154,6 +157,56 @@ texture = ExtResource("1_tt30a")
 [sub_resource type="TileSet" id="TileSet_wlb43"]
 sources/0 = SubResource("TileSetAtlasSource_1ey7h")
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_lxycn"]
+atlas = ExtResource("5_w1mvj")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vqw7c"]
+atlas = ExtResource("5_w1mvj")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_86xni"]
+atlas = ExtResource("5_w1mvj")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qq0qw"]
+atlas = ExtResource("5_w1mvj")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q6q8i"]
+atlas = ExtResource("5_w1mvj")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tdh31"]
+atlas = ExtResource("5_w1mvj")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wlb43"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lxycn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vqw7c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_86xni")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qq0qw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q6q8i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tdh31")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="Node2D" type="Node2D" unique_id=2135865113]
 script = ExtResource("1_o1ld7")
 menu_scene = ExtResource("2_2ayvv")
@@ -165,10 +218,10 @@ color = Color(0.12854859, 0.12854818, 0.13897374, 1)
 
 [node name="Label" type="Label" parent="ColorRect" unique_id=970487016]
 layout_mode = 0
-offset_left = 332.0
-offset_top = 102.0
-offset_right = 748.0
-offset_bottom = 169.0
+offset_left = 381.0
+offset_top = 56.0
+offset_right = 797.0
+offset_bottom = 123.0
 theme_override_font_sizes/font_size = 48
 text = "NINJA - THE GAME"
 
@@ -182,9 +235,90 @@ tile_set = SubResource("TileSet_wlb43")
 
 [node name="Button" type="Button" parent="." unique_id=2077590846]
 texture_filter = 1
-offset_left = 870.0
+offset_left = 817.0
 offset_top = 527.0
 offset_right = 1105.0
 offset_bottom = 620.0
 theme_override_font_sizes/font_size = 32
 text = "START "
+icon = ExtResource("4_2ayvv")
+expand_icon = true
+
+[node name="Button2" type="Button" parent="." unique_id=1230765992]
+offset_left = 14.0
+offset_top = 583.0
+offset_right = 160.0
+offset_bottom = 636.0
+text = "WHAT IS THIS"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=386959266]
+texture_filter = 1
+position = Vector2(101, 86)
+sprite_frames = SubResource("SpriteFrames_wlb43")
+autoplay = "default"
+frame_progress = 0.3335815
+
+[node name="ButtonOptions" type="Button" parent="." unique_id=1443312781]
+offset_left = 169.0
+offset_top = 585.0
+offset_right = 311.0
+offset_bottom = 635.0
+text = "OPTIONS"
+
+[node name="Control" type="Control" parent="." unique_id=965158254]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="Control" unique_id=693002117]
+layout_mode = 0
+offset_left = 372.0
+offset_top = 143.0
+offset_right = 771.0
+offset_bottom = 604.0
+color = Color(0.49626768, 0.21899301, 0.2771935, 1)
+
+[node name="ButtonClose" type="Button" parent="Control" unique_id=1232281149]
+texture_filter = 1
+layout_mode = 0
+offset_left = 600.0
+offset_top = 152.0
+offset_right = 761.0
+offset_bottom = 224.0
+text = "CLOSE"
+icon = ExtResource("6_lxycn")
+expand_icon = true
+
+[node name="Label" type="Label" parent="Control" unique_id=354916567]
+layout_mode = 0
+offset_left = 416.0
+offset_top = 246.0
+offset_right = 731.0
+offset_bottom = 582.0
+text = "CONTROLS
+
+←  →     MOVE
+
+SPACE    JUMP
+DOUBLE  JUMP
+
+W        DASH
+
+A        NINJA STAR"
+
+[node name="ButtonChange" type="Button" parent="Control" unique_id=2083956134]
+layout_mode = 0
+offset_left = 384.0
+offset_top = 184.0
+offset_right = 547.0
+offset_bottom = 215.0
+text = "CHANGE CONTROLS"
+
+[node name="ButtonView" type="Button" parent="Control" unique_id=394599539]
+layout_mode = 0
+offset_left = 384.0
+offset_top = 150.0
+offset_right = 520.0
+offset_bottom = 181.0
+text = "VIEW CONTROLS"
